@@ -1,9 +1,47 @@
 h1 {
     background-color: #fcd5ce;
+    text-align: center;
+}
+
+span {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+div {
+    background-color: #cdb4db;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+article {
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: plum;
+}
+
+#aboutMe p {
+    text-align: center;
 }
 
 #aboutMe{
-    width: 800px;
-    height: 200px;
+    width: 700px;
+    height: 180px;
+    text-align: left;
     background-color: #ffb5a7;
+    border: 3px dashed grey;
+    border-radius: 30px;
+}
+
+button {
+    font-size: 1em;
+    color: white;
+    background-color: #f4acb7;
+    font-weight: bold;
+    border-radius: 0.5em;
+    padding: 0 1em;
 }
