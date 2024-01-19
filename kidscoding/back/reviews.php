@@ -3,7 +3,7 @@
         height: 100% !important;
     }
 </style>
-<link rel="stylesheet" href="../css/back_style.css">
+<link rel="stylesheet" href="./css/back_style.css">
 <div class="container-fluid">
     <h1 class="text-center mt-3 mb-3">課程評論管理</h1>
     <hr>

@@ -63,6 +63,7 @@ foreach ($_POST['id'] as $key => $id) {
                 $row['title']=$_POST['title'][$key];
                 $row['subti']=$_POST['subti'][$key];
                 $row['review']=$_POST['review'][$key];
+                $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
             default:
                 $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
         }
