@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-01-15 17:08:31
--- 伺服器版本： 10.4.28-MariaDB
--- PHP 版本： 8.2.4
+-- 產生時間： 2024-01-16 09:21:13
+-- 伺服器版本： 10.4.32-MariaDB
+-- PHP 版本： 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,13 +38,11 @@ CREATE TABLE `ad` (
 --
 
 INSERT INTO `ad` (`id`, `text`, `sh`) VALUES
-(2, '轉知臺北教育大學與臺灣師大合辦第11屆麋研齋全國硬筆書法比賽活動', 1),
-(4, '轉知:法務部辦理「第五屆法規知識王網路闖關競賽辦法', 1),
-(5, '轉知2012年全國青年水墨創作大賽活動', 0),
-(6, '欣榮圖書館101年悅讀達人徵文比賽，歡迎全校師生踴躍投稿參加', 0),
-(7, '轉知:教育是人類升沉的樞紐-2013教師生命成長營', 0),
-(8, '泰山校園資訊系統', 1),
-(9, 'galaxy', 1);
+(5, '基礎教育中的程式設計：程式設計成為現代基本素養的一部分', 1),
+(6, '產業發展與創新：程式設計對於科技產業發展和創新的關鍵作用', 1),
+(7, '跨領域應用：程式設計在各個領域的廣泛應用，如醫療、環保、金融等', 1),
+(8, '教育體系改革：程式設計教育的融入與課綱調整', 1),
+(16, '培養創意思維：程式設計培養學生的邏輯思考和問題解決能力', 1);
 
 -- --------------------------------------------------------
 
@@ -83,7 +81,7 @@ CREATE TABLE `bottom` (
 --
 
 INSERT INTO `bottom` (`id`, `bottom`) VALUES
-(1, '');
+(1, 'xxxx');
 
 -- --------------------------------------------------------
 
@@ -102,7 +100,7 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id`, `img`, `sh`) VALUES
-(4, '01D01.jpg', 1),
+(4, '03B04.png', 1),
 (5, '01D02.jpg', 1),
 (6, '01D03.jpg', 1),
 (7, '01D04.jpg', 1),
@@ -134,7 +132,7 @@ INSERT INTO `mem` (`id`, `acc`, `pw`) VALUES
 (2, 'member001', '12345678'),
 (3, 'member002', '123456789'),
 (4, 'member003', '987654321'),
-(5, 'mem004', '1234');
+(5, 'mem00666', '1234');
 
 -- --------------------------------------------------------
 
@@ -225,8 +223,8 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`id`, `title`, `subti`, `review`, `img`, `sh`) VALUES
-(1, '程式設計是我最喜歡的課!!!', '因為程式設計課，我學會做自己的小遊戲。', '透過學習程式設計課，我會做自己的遊戲，我喜歡分享給我的同學。', '', 0),
-(2, '我喜歡透過寫程式表達想說的事情', '這會是我想一直學下去的課程!', '寫程式可以做遊戲、寫故事、做卡片和動畫...還可以訓練我邏輯思考。', '', 0);
+(4, '程式設計是我最喜歡的課!!!', '因為程式設計課，我學會做自己的小遊戲。', ' 透過學習程式設計課，我會做自己的遊戲，我喜歡分享給我的同學。', 'slide5.png', 0),
+(5, '學習Scratch結合Microbit真是一個令人興奮的經驗！', '學會程式設計，還能將它應用在物理學中，創造出互動遊戲。', '設計遊戲，讓Microbit根據物理世界的變化做出反應，這讓我更深入了解物理學的原理。', '03B08.png', 0);
 
 -- --------------------------------------------------------
 
@@ -267,7 +265,7 @@ CREATE TABLE `total` (
 --
 
 INSERT INTO `total` (`id`, `total`) VALUES
-(1, 526);
+(1, 527);
 
 --
 -- 已傾印資料表的索引
@@ -283,7 +281,8 @@ ALTER TABLE `ad`
 -- 資料表索引 `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `acc` (`acc`) USING HASH;
 
 --
 -- 資料表索引 `bottom`
@@ -341,13 +340,13 @@ ALTER TABLE `total`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `ad`
 --
 ALTER TABLE `ad`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `bottom`
@@ -383,7 +382,7 @@ ALTER TABLE `mvim`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`

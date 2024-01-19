@@ -9,6 +9,9 @@ switch ($_GET['table']) {
     case "image":
         echo "<h3>更新校園映像圖片</h3>";
         break;
+        case "reviews":
+            echo "<h3>更新評論區圖片</h3>";
+            break;
 }
 ?>
 
@@ -28,6 +31,9 @@ switch ($_GET['table']) {
                 case "image":
                     echo "<td>校園映像圖片</td>";
                     break;
+                    case "reviews":
+                        echo "<td>課程評論圖片</td>";
+                        break;
             }
             ?>
 

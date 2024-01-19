@@ -32,10 +32,10 @@ if (!isset($_SESSION['login'])) {
   <link href="./css/sidebars.css" rel="stylesheet">
 </head>
 
-<body>
-  <div id="cover" style="display:none; ">
+<body class="w-100">
+  <div id="cover" style="display:none;">
     <div id="coverr">
-      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl('#cover')">X</a>
+      <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;" onclick="cl(&#39;#cover&#39;)">X</a>
       <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
     </div>
   </div>
@@ -100,7 +100,6 @@ if (!isset($_SESSION['login'])) {
     </ul>
   </div> -->
 
-
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <title>Bootstrap</title>
@@ -130,7 +129,8 @@ if (!isset($_SESSION['login'])) {
     <div class="container-fluid">
       <span class="navbar-brand mb-0 ms-4" style="font-weight:bold">Admin | Dashboard</span>
       <form class="d-flex">
-        <a href="./api/logout.php" class="btn btn-outline-secondary">Sign out</a>
+        <a href="./api/logout.php" class="me-3 btn btn-outline-secondary">Sign out</a>
+        <a href="./index.php" class="btn btn-outline-warning">返回前台</a>
       </form>
     </div>
   </header>
@@ -138,7 +138,7 @@ if (!isset($_SESSION['login'])) {
 
   <!-- sidebar start -->
   <div class="container-fluid d-md-flex flex-nowrap offcanvas-body overflow-y-auto">
-    <div class="row">
+    <div class="row w-100 h-100">
       <div class="col-3 nav d-flex flex-column flex-shrink-0 p-3 text-bg-dark " style="width: 280px;">
 
         <a href="./back.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -252,9 +252,9 @@ if (!isset($_SESSION['login'])) {
       </div>
       <div class="b-example-vr"></div>
 
-      <div class="col" style="width:1400px;height:1200px">
+      <div class="col w-100 h-100">
         <!-- 右下main area start -->
-        <main>
+        <main class="w-100 h-100" style="overflow: auto;">
 
           <?php
 
@@ -263,7 +263,7 @@ if (!isset($_SESSION['login'])) {
           if (file_exists($file)) {
             include $file;
           } else {
-            include "./back/ad.php";
+            include "./back.php?do=ad";
           }
 
           ?>

@@ -1,12 +1,12 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">最新消息資料管理</p>
+<div class="container-fluid">
+    <h1 class="text-center mt-3 mb-3">最新消息資料管理</h1>
     <form method="post" action="./api/edit.php">
-        <table width="100%" style="text-align: center">
-            <tbody>
-                <tr class="yel">
-                    <td width="80%">最新消息資料內容</td>
-                    <td width="10%">顯示</td>
-                    <td width="10%">刪除</td>
+        <table class="table table-striped">
+            <tbody class="text-center">
+                <tr class="fs-5">
+                    <th class="col-8">最新消息資料內容</th>
+                    <th class="col-2">顯示</th>
+                    <th class="col-2">刪除</th>
                 </tr>
                 <?php
                 // 後台:用foreach迴圈將all()全部的資料倒出來
@@ -44,7 +44,7 @@
             </tbody>
         </table>
 
-        <div class="cent">
+        <div class="text-center">
             <?php
             if($now>1){
                 $prev=$now-1;
@@ -68,12 +68,12 @@
             ?>
         </div>
 
-        <table style="margin-top:40px; width:70%;">
+        <table class="table table-striped">
             <tbody>
                 <tr>
                     <input type="hidden" name="table" value="<?=$do;?>">
                     <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增最新消息資料"></td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
+                    <td class="text-center"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>
         </table>

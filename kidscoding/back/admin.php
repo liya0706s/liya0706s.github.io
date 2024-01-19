@@ -2,7 +2,7 @@
     <p class="t cent botli">管理者帳號管理</p> -->
 <link rel="stylesheet" href="../css/back_style.css">
 <div class="container-fluid">
-    <h1 class="text-center mt-3 mb-3">會員帳號管理</h1>
+    <h1 class="text-center mt-3 mb-3">管理者帳號管理</h1>
     <hr>
     <form method="post" action="./api/edit.php">
         <table class="table table-striped">
@@ -52,7 +52,7 @@
     </form>
 
     <!-- 新增區域 -->
-    <h2 class="mt-5 mb-3 fw-medium">新增會員帳號</h2>
+    <h2 class="mt-5 mb-3 fw-medium">新增管理者帳號</h2>
     <hr>
     <form action="./api/add.php" method="post">
             <table>

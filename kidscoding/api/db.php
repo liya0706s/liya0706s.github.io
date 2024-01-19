@@ -13,8 +13,8 @@ class DB
     public function __construct($table)
     {
         $this->table = $table;
-        // $this->pdo = new PDO($this->dsn, 'root', '');
-        $this->pdo=new PDO($this->dsn,'s1120409','s1120409');
+        $this->pdo = new PDO($this->dsn, 'root', '');
+        // $this->pdo=new PDO($this->dsn,'s1120409','s1120409');
     }
 
 

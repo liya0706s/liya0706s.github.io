@@ -2,7 +2,7 @@
 
 /* CSS Document */
 body {
-	padding-top: 50px;
+	/* padding-top: 50px; */
 	margin: 0px;
 }
 
@@ -199,8 +199,4 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-
-
-
-
 
