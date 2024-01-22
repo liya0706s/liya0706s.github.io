@@ -74,6 +74,6 @@ foreach ($_POST['id'] as $key => $id) {
         $DB->save($row);
     }
 }
-
+dd($_POST);
 // 跳轉回管理後台
-to("../back.php?do=$table");
+// to("../back.php?do=$table");

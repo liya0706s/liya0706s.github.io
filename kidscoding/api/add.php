@@ -17,6 +17,12 @@ switch ($table) {
     case "mem":
         unset($_POST['pw2']);
         break;
+
+    case "reviews":
+        $row['title'] = $_POST['title'][$key];
+        $row['subti'] = $_POST['subti'][$key];
+        $row['review'] = $_POST['review'][$key];
+        $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
 }
 
 // 處理上傳檔案：  
@@ -39,5 +45,5 @@ unset($_POST['table']);
 // 因為它在建立資料表物件後已經用不到了，不用save儲存進資料庫。
 
 $DB->save($_POST);
-
-to("../back.php?do=$table");
+dd($_POST);
+// to("../back.php?do=$table");
