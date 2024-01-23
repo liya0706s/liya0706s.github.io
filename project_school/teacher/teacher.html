@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        table,
+        th,
+        tr,
+        td {
+            border: 2px burlywood solid;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            width: 80%;
+        }
+
+        th {
+            background-color: lightcyan;
+            color: black;
+        }
+
+        /* td{
+            width:100px;
+        } */
+
+        h2 {
+            font-size: xx-large;
+        }
+
+        nav>a {
+            text-decoration: none;
+        }
+
+        .add {
+            margin-left: 75%;
+            text-decoration: none;
+        }
+        img {
+            width: 150px;
+            height: 25vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="../index.html">Home&nbsp;&nbsp;&nbsp;</a>
+            <a href="../student/student.html">Student&nbsp;&nbsp;&nbsp;</a>
+            <a href="./teacher.html">Teacher</a>
+        </nav>
+        <h2>Teacher List</h2>
+        <a href="./create.html" class="add">Add</a>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>mail</th>
+                <th>mobile</th>
+                <th>pic</th>
+                <th>others</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="./edit.html?id=1">Aaa</a></td>
+                <td>aaa@abc.com</td>
+                <td>0912-123-456</td>
+                <td><img src="../img/6841377.jpg" alt=""></td>
+                <td>
+                    <a href="./edit.html?id=1">edit</a> /
+                    <a href="./del.html?id=1">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="./edit.html?id=2">Bbb</a></td>
+                <td>bbb@abc.com</td>
+                <td>0923-456-789</td>
+                <td><img src="../img/下載.jpg" alt=""></td>
+                <td>
+                    <a href="./edit.html?id=2">edit</a> /
+                    <a href="./del.html?id=2">delete</a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>
