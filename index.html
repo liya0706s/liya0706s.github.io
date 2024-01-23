@@ -213,10 +213,14 @@
     // 建立星星動畫
 
     gsap.to('.star', {
-      filter: 'drop-shadow(0 0 30px rgba(255,255,0,1))',
+      filter: 'drop-shadow(0 0 100px rgba(255,255,0,1))',
       // 隨機調整星星的大小，範圍在0.5到1之間
-      scale: 'random(0.2,1)',
+      left: '+=random(-10,10)%',
+      x: 'random(-50,50)',
+      y: 'random(-50,50)',
+      scale: 'random(0.3,0.6)',
       stagger: 0.1,
+      repeat:true,
     })
 
   </script>
