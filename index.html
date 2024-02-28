@@ -2,230 +2,166 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- favicon -->
-  <link rel="icon" href="./img/angielee_logo-removebg-preview.png" type="image/x-icon">
-  <title>Angie's Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- 引入swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <style>
-    body {
-      margin: auto;
-      color: white;
+    <title>angie's Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- datatable css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css"
+        integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    h1{
+        text-align: center;
     }
-
-    li>a {
-      text-decoration: none;
-      color: white;
-    }
-
-    table,
-    tr,
-    td {
-      border: 3px solid lightgray;
-      border-collapse: collapse;
-    }
-
-    li {
-      font-size: larger;
-    }
-
-    /* 星星動畫CSS */
-    body {
-      height: 100vh;
-      background-color: black;
-      overflow: hidden;
-    }
-
-    .container-fluid {
-      height: 100vh;
-      perspective: 100px;
-    }
-
-    @keyframes animate {
-      0% {
-        text-shadow: 0 0 1px rgba(255, 255, 135, 1), 0 0 1px rgba(255, 255, 0, 1);
-      }
-
-      50% {
-        text-shadow: 0 0 1px rgba(255, 255, 135, 1), 0 0 1px rgba(255, 255, 0, 1);
-      }
-
-      100% {
-        text-shadow: 0 0 1px rgba(255, 255, 135, 1), 0 0 1px rgba(255, 255, 0, 1);
-      }
-    }
-
-    /* 星星動畫CSS end */
-  </style>
+</style>
 </head>
+<h1><b>空氣品質指標</b></h1>
+<h3><b>空氣品質指標的定義</b></h3>
+<p>空氣品質指標為依據監測資料將當日空氣中臭氧 (O3)、細懸浮微粒 (PM2.5)、懸浮微粒 (PM10)、一氧化碳 (CO)、二氧化硫 (SO2) 及二氧化氮 (NO2) 濃度等數值，以其對人體健康的影響程度，分別換算出不同污染物之副指標值，再以當日各副指標之最大值為該測站當日之空氣品質指標值 (AQI)。</p>
 
 <body>
-  <div class="container-fluid vh-100">
-    <!-- 引入 jquery -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- 引入 gsap 主程式 -->
-    <script src="./gsap/gsap.js"></script>
-    <div class="star animate"></div>
-
-    <h1><img src="./img/angielee_logo-removebg-preview.png" style="width:75px;height:75px">My Project</h1>
-    <ul>
-      <li><a href="./myProject/index.html">前端作品</a></li>
-      <li><a href="./myPhp/index.html">後端作品</a></li>
-      <li><a href="./kidscoding/index.php">全端作品-從小學程式·程式從小學</a></li>
-      <li class="mb-2">Graphic Design</li>
-      <table>
-        <tr>
-          <td><img type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal"
-              src="./design/009-dragon-year.jpg" alt="" style="width:150px;"></td>
-          <td><img type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal_2"
-              src="./design/09_angielee_travel.jpg" alt="" style="width:150px;"></td>
-          <td><img type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal_3"
-              src="./design/kyoto_poster.jpg" alt="" style="width: 150px;"></td>
-        </tr>
-        <tr class="text-center">
-          <td colspan="3">
-            <img type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal_4"
-              src="./design/training_banner.jpg" alt="" style="width:400px;">
-          </td>
-        </tr>
-      </table>
-
-  </div>
-
-  <!-- The Modal-1 -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <!-- <h4 class="modal-title">Modal Heading</h4> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img src="./design/009-dragon-year.jpg" alt="" style="width:350px;">
-        </div>
-
-        <!-- Modal footer -->
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">x</button>
-        </div> -->
-
-      </div>
-    </div>
-  </div>
-  <!-- The Modal-1 end -->
-
-  <!-- The Modal-2 -->
-  <div class="modal fade" id="myModal_2">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <!-- <h4 class="modal-title">Modal Heading</h4> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img src="./design/09_angielee_travel.jpg" alt="" style="width:350px;">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- The Modal-2 end -->
-
-  <!-- The Modal-3 -->
-  <div class="modal fade" id="myModal_3">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <!-- <h4 class="modal-title">Modal Heading</h4> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img src="./design/kyoto_poster.jpg" alt="" style="width:350px;">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- The Modal-3 end -->
+    <table class="display" id="myTable">
+        <thead>
+            <tr>
+                <th class="text-center" width="5%">序號</th>
+                <th class="text-center" width="5%">地區</th>
+                <th class="text-center">預報文字</th>
+                <th class="text-center" width="8%">主要汙染物名稱</th>
+                <th class="text-center" width="10%">空氣品質指標AQI</th>
+                <th class="text-center" width="7%">預報時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>....</td>
+                <td>amy</td>
+                <td>....</td>
+                <td>img</td>
+                <td>....</td>
+            </tr> -->
+        </tbody>
+    </table>
 
 
-  <!-- The Modal-4 -->
-  <div class="modal fade" id="myModal_4">
-    <div class="modal-dialog">
-      <div class="modal-content">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- pw url -->
+    <!-- <script src="../ignore/js/pw2.js"></script> -->
 
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <!-- <h4 class="modal-title">Modal Heading</h4> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
+    <!-- datatable js -->
 
-        <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img src="./design/training_banner.jpg" alt="" width="450px">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- The Modal-4 end -->
-
-  </ul>
-
-  <script>
-    // 建立星星
-
-    function createStar(starCount) {
-      for (let i = 0; i < starCount; i++) {
-        $('.container-fluid').append(`<div class="star animate">+</div>`)
-      }
-
-      $('.star').each(function (index, star) {
-        $(this).css({
-          position: 'absolute',
-          left: gsap.utils.random(0, 100) + '%',
-          top: gsap.utils.random(0, 100) + '%',
-          color: 'yellow',
-        })
-      })
-    }
-
-    createStar(50)
-
-    // 建立星星動畫
-
-    gsap.to('.star', {
-      filter: 'drop-shadow(0 0 100px rgba(255,255,0,1))',
-      // 隨機調整星星的大小，範圍在0.5到1之間
-      left: '+=random(-10,10)%',
-      x: 'random(-50,50)',
-      y: 'random(-50,50)',
-      scale: 'random(0.3,0.6)',
-      stagger: 0.1,
-      repeat:true,
-    })
-
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
+        integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
+        integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
+    <!-- <img src="./img/day/1.svg" alt=""> -->
+
+    <!-- <img src="./img/" alt=""> -->
+
+    <script>
+        $(document).ready(function () {
+            // let url = aqiUrl;
+            let url = "https://data.moenv.gov.tw/api/v2/aqf_p_01?api_key=6bd442ff-b1ee-4af1-a140-c688b41c36e8";
+            // request url 
+            const myTable = $('#myTable');
+
+            // jqajax 
+            $.ajax({
+                type: "get",
+                url: url,  //變數
+                // data: "data",
+                // dataType: "dataType",
+                success: function (res) {
+                    // . [] -> property variable
+                    // .xxx() ['xxx']() ->xxx() method function action
+                    console.log('res', res);
+                    console.log('res.records', res.records);
+                    console.log('res.records[99]', res.records[99]);
+                    console.log('res.records.length', res.records.length);
+
+                    let nowRecords = res.records;
+
+                    // jqeach 
+                    $.each(nowRecords, function (key, value) {
+                        if (key < 100) {
+                            console.log('key', key);
+                            console.log('value', value);
+
+                            // 編號是key+1
+                            let nowID = key + 1;
+                            // 改成字串，用padStart()是字串的方法，補零兩位數
+                            let stringID = nowID.toString().padStart(2, "0");
+                            let nowRecordsArea = value.area;
+                            let nowRocordsContent = value.content;
+                            let nowRocordsMajor = value.majorpollutant;
+                            let nowRocordsPublishtime = value.publishtime;
+                            let nowRocordsAqi = value.aqi;
+
+                            // 初始化圖示檔名變數
+                            let imgUrl = "";
+
+                            // 判斷 AQI 值來設定對應的圖示檔名
+                            if (nowRocordsAqi < 51) {
+                                imgUrl = "01.png"; // 綠色圖示
+                            } else if (nowRocordsAqi >= 51 && nowRocordsAqi < 101) {
+                                imgUrl = "02.png"; // 黃色圖示，根據需要調整檔名
+                            } else if (nowRocordsAqi >= 101 && nowRocordsAqi < 151) {
+                                imgUrl = "03.png"; // 橙色圖示，根據需要調整檔名
+                            } else if (nowRocordsAqi >= 151 && nowRocordsAqi < 201) {
+                                imgUrl = "04.png"; // 紅色圖示，根據需要調整檔名
+                            } else if (nowRocordsAqi >= 201 && nowRocordsAqi < 301) {
+                                imgUrl = "05.png"; // 紫色圖示，根據需要調整檔名
+                            } 
+
+                            console.log('nowRecordsArea', nowRecordsArea);
+
+                            // let content =`
+                            //     <li>${nowLocationName}</li>
+                            // `;
+
+                            let content = `
+                            <tr>
+                                <td class="text-center" width="5%">${stringID}</td>
+                                <td class="text-center" width="5%">${nowRecordsArea}</td>
+                                <td class="text-start">${nowRocordsContent}</td>
+                                <td class="text-center" width="8%">${nowRocordsMajor}</td>
+                                <td class="text-center" width="10%">${nowRocordsAqi} <img src="./img/${imgUrl}" alt="" width="90px" height="105px"> </td>
+                                <td class="text-center" width="7%">${nowRocordsPublishtime}</td>
+                            </tr>
+                        `;
+
+                            // console.log('nowLocationName', nowLocationName);
+                            $('tbody').append(content);
+
+                        } else {
+                            return false;  // 當索引達到100時停止迭代
+                        }
+
+
+                    });
+
+                    // run dataTable 
+                    myTable.DataTable();
+                }
+
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
